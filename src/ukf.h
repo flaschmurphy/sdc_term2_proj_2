@@ -73,6 +73,11 @@ public:
   // Timestamp from the last step (used in time delta calculation)
   long long previous_t_;
 
+  // Measurement noise covariance matrix (Radar)
+  MatrixXd R_radar_ = MatrixXd(3, 3);
+
+  // Measurement noise covariance matrix (Lidar)
+  MatrixXd R_lidar_ = MatrixXd(2, 2);
 
   /**
    * Constructor
